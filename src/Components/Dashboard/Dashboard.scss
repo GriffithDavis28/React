@@ -1,0 +1,12 @@
+.dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 32px;
+  }
+  
+  .dashboard > * {
+    flex: 1;
+    max-width: 300px;
+  }

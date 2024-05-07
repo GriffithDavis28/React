@@ -1,0 +1,35 @@
+.product-count-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid black;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  text-align: center;
+  width: 200px;
+  text-decoration: none;
+}
+
+.product-count-card h1 {
+  color: #333333;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.product-count-card p {
+  color: #666666;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.product-count-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  transition: all 0.3s ease-in-out;
+}
+
+.product-count-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
