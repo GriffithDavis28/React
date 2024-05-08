@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
+import { Carousel } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { ProductContext } from "../Context/ProductContext";
 import { ProductType } from "../Types/ProductType";
 import { Products } from "./Products";
 import "./display.scss";
-
 
 //Function to display the details of a product
 
@@ -36,7 +36,6 @@ const ProductDetails: React.FC = () => {
 
   return (
     <div>
-      <button onClick={backToProducts}> {"Back"}</button>
     <div className="details">
       <div>
         <img src={selected[0].image} alt={selected[0].name}/>
@@ -48,6 +47,14 @@ const ProductDetails: React.FC = () => {
         <br />
         <p>Quantity: {selected[0].quantity}</p>
         <br />
+        <Carousel interval={3000}>
+      {selected[0].images.map((url, index) => (
+        <Carousel.Item key={index}>
+          <img src={url} alt={`Slide ${index}`} />
+        </Carousel.Item>
+      ))}
+    </Carousel>
+    <button onClick={backToProducts}> {"Back"}</button>
       </div>
       {visibility && (
         <div className={`visibility ? "visible":"hidden"`}>
